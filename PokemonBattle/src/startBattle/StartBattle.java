@@ -5,7 +5,7 @@ import ru.ifmo.se.pokemon.*;
 
 
 
-public class startBattle {
+public class StartBattle {
     public static void main (String args[])
     {
         Battle battleField = new Battle ();
