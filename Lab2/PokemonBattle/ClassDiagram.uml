@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="318.0" y="613.0">moves.SwordsDance</node>
+    <node x="0.0" y="913.0">pokemons.Zygarde</node>
+    <node x="0.0" y="313.0">moves.RockSLide</node>
+    <node x="314.0" y="763.0">moves.LandsWrath</node>
+    <node x="242.5" y="0.0">pokemons.Yanma</node>
+    <node x="318.0" y="313.0">moves.SteelWing</node>
+    <node x="473.0" y="0.0">moves.NightSlash</node>
+    <node x="0.0" y="463.0">moves.Astonish</node>
+    <node x="521.0" y="763.0">moves.HydroPump</node>
+    <node x="318.0" y="463.0">moves.Confide</node>
+    <node x="632.0" y="613.0">moves.Coil</node>
+    <node x="231.0" y="913.0">startBattle.StartBattle</node>
+    <node x="0.0" y="613.0">moves.Blizzard</node>
+    <node x="234.0" y="106.0">pokemons.Yanmega</node>
+    <node x="3.0" y="106.0">pokemons.Lombre</node>
+    <node x="9.5" y="0.0">pokemons.Lotad</node>
+    <node x="0.0" y="212.0">pokemons.Ludicolo</node>
+    <node x="0.0" y="763.0">moves.Rest</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="pokemons.Lombre" target="pokemons.Lotad">
+      <point x="0.0" y="-28.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="pokemons.Ludicolo" target="pokemons.Lombre">
+      <point x="0.0" y="-28.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="pokemons.Yanmega" target="pokemons.Yanma">
+      <point x="0.0" y="-28.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4335288367546432" x="1029.5264937993236" y="484.4498308906426" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="774b7955-9e5c-4437-a74a-4ca9b15889f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/PokemonBattle.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/Astonish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/Blizzard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/Coil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/Confide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/HydroPump.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/LandsWrath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/NightSlash.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/Rest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/RockSLide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/SteelWing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/moves/SwordsDance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/pokemons/Lombre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/pokemons/Lotad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/pokemons/Ludicolo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/pokemons/Yanma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/pokemons/Yanmega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/pokemons/Zygarde.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokemonBattle/out/production/PokemonBattle/startBattle/StartBattle.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lAzguJiMcKWcGb4ZXWjewQVjCH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="774b7955-9e5c-4437-a74a-4ca9b15889f4" name="Default Changelist" comment="" />
+      <created>1607054797849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607054797849</updated>
+      <workItem from="1607054799101" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

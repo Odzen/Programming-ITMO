@@ -1,7 +1,6 @@
 package pokemons;
 
 import moves.Astonish;
-import ru.ifmo.se.pokemon.Pokemon;
 
 
 public class Lombre extends Lotad{
