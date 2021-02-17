@@ -1,40 +1,24 @@
 package Places;
 
 import things.Size;
-import things.Thing;
 import things.TypeThing;
-
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
-public class Construction extends AbsSize {
-    private static  ArrayList<Room> arrayRooms;
-    private static int numRooms;
-    private int capacityCreatures;
-    private int capacityFurniture;
+public class Construction extends AbsPlace {
 
 
-    public Construction(String name, TypeThing type, boolean floating,int length, int width, boolean dangerous, ArrayList<Room> arrayRooms) {
-        super(name, type, amount,  shiny,  floating,  length,  width,  dangerous);
-        this.arrayRooms=new ArrayList<>();
-        numRooms=0;
+    public Construction(String name, int amount, boolean floating, int length, int width, boolean dangerous, ArrayList<Room> arrayRooms, int capacityCreatures,int capacityFurniture ) {
+        super( name,  amount,  floating,  length,  width,  dangerous, arrayRooms,  capacityCreatures, capacityFurniture );
     }
 
     public void addRoom(Room room){
-            arrayRooms.add(room);
-            numRooms+=1;
+            super.getRooms().add(room);
+            super.numRooms+=1;
     }
 
 
-    public int getCapacityCreatures(){return this.capacityCreatures;}
-
-    public static int getNumberRooms(){
-        return numRooms;
-    }
-
-    public String toString() {
-        return this.getName();
-    }
+    public int getCapacityCreatures(){return super.getCapacityCreatures();}
 
     @Override
     public void defineSize() {
@@ -50,30 +34,28 @@ public class Construction extends AbsSize {
     }
 
     public int defineTotalSetsCapacityFurniture() {
-        for(int i=0; i<arrayRooms.toArray().length;i++){
+        for(int i=0; i<this.getRooms().toArray().length;i++){
             int capacity=0;
-            capacity=arrayRooms.get(0).getCapacityThings();
-            capacityFurniture+=capacity;
+            capacity=this.getRooms().get(0).getCapacityThings();
+            setCapacityFurniture(capacity);
         }
-
-        return capacityFurniture;
+        return getCapacityFurniture();
     }
 
     public void defineCapacityCreatures() {
         if(this.getSize()==Size.BIG){
-            capacityCreatures=10;
+            setCapacityCreatures(10);
         }
         else if(this.getSize()==Size.MEDIUM){
-            capacityCreatures=5;
+            setCapacityCreatures(5);
         }
         else{
-            capacityCreatures=1;
+            setCapacityCreatures(1);
         }
     }
 
     public boolean enoughSpaceForCreatures(int numberOfCreatures){
-
-        if(capacityCreatures>numberOfCreatures){
+        if(this.getCapacityCreatures()>numberOfCreatures){
             return true;
         }
         else{
@@ -82,12 +64,25 @@ public class Construction extends AbsSize {
     }
 
     public boolean enoughSpaceForFurnitore(int numberFurnitore){
-
-        if(capacityFurniture>numberFurnitore){
+        if(getCapacityFurniture()>numberFurnitore){
             return true;
         }
         else{
             return false;
         }
+    }
+
+    public String toString() {
+        return this.getName();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

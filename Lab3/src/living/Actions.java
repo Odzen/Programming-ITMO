@@ -8,5 +8,5 @@ public interface Actions {
     public void sees(Object see);
     public void feels(Feelings feeling);
     public void said(Creature creature, String msg);
-    public void moveAccessory(Accesories accessory);
+    public void moveAccessory(Accessories accessory);
 }

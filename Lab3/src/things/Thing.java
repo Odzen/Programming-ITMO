@@ -2,7 +2,7 @@ package things;
 
 import java.util.Objects;
 
-public abstract class Thing{
+public class Thing{
 
     private String name;
     private TypeThing type;
@@ -35,7 +35,7 @@ public abstract class Thing{
         return this.amount > 0;
     }
     public void calculateArea(){
-        area=width* length;
+        area=width*length;
     }
     public void increaseAmount(){
         amount+=1;
@@ -46,6 +46,8 @@ public abstract class Thing{
     public int getArea(){
         return area;
     }
+    public boolean getFloating(){return floating;}
+    public boolean getShinny(){return shiny;}
 
 
     public void setType(TypeThing type) {
@@ -97,8 +99,6 @@ public abstract class Thing{
                 size == thing.size;
     }
 
-    //The size depends of the typething and others characteristics
-    public abstract void defineSize();
 
     public boolean isType(TypeThing type) {
         return this.type.equals(type);

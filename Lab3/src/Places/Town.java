@@ -13,7 +13,7 @@ public class Town {
     private ArrayList<Thing> things;
     private ArrayList<Construction> constructions;
 
-    public Town(String name, boolean prepareForStrongRain) {
+    public Town(String name, boolean prepareForStrongRain, ArrayList<Thing> things, ArrayList<Construction> constructions) {
         this.name = name;
         this.prepareForStrongRain=prepareForStrongRain;
         this.awash=false;
@@ -67,6 +67,9 @@ public class Town {
         return raining;
     }
 
+    public String toString() {
+        return this.getName();
+    }
 
     @Override
     public boolean equals(Object o) {
