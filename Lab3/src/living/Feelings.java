@@ -8,6 +8,8 @@ public enum Feelings {
     STAGNATION("Stagnation"),
     TIREDNESS("Tiredness"),
     SATISFACTION("Satisfaction"),
+    SURPRISE("Surprised"),
+    DWINDLING("Dwindling"),
     ATTENTION("Attention"),
     TRAPPED("Trapped");
 

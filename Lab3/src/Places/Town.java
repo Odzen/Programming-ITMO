@@ -12,6 +12,8 @@ public class Town {
     private String name;
     private ArrayList<Thing> things;
     private ArrayList<Construction> constructions;
+    private int numThings;
+    private int numConst;
 
     public Town(String name, boolean prepareForStrongRain, ArrayList<Thing> things, ArrayList<Construction> constructions) {
         this.name = name;
@@ -20,6 +22,17 @@ public class Town {
         this.raining=false;
         this.things=new ArrayList<>();
         this.constructions=new ArrayList<>();
+    }
+
+
+    public void addConst(Construction construction){
+        getConstructions().add(construction);
+        numConst+=1;
+    }
+
+    public void addThings(Thing thing){
+        getThings().add(thing);
+        numThings+=1;
     }
 
     public void setAwash(boolean awash) {
@@ -33,6 +46,10 @@ public class Town {
     public String getName() {
         return name;
     }
+
+    public int getNumThings(){return numThings;}
+
+    public int getNumConst(){return numConst;}
 
     public ArrayList<Construction> getConstructions() {
         return constructions;
@@ -52,9 +69,12 @@ public class Town {
 
     public void determinateAwash() {
         if(isRaining()){
-            if(isPrepareForStrongRain())
+            if(isPrepareForStrongRain()) {
+                System.out.println("The village " + this.getName() + "is ok");
                 setAwash(false);
+            }
             else{
+                System.out.println("The village " + this.getName() + " is flooded");
                 setAwash(true);
             }
         }
@@ -75,12 +95,19 @@ public class Town {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Town town = (Town) o;
-        return awash == town.awash &&
-                raining == town.raining &&
-                Objects.equals(name, town.name) &&
-                Objects.equals(things, town.things) &&
-                Objects.equals(constructions, town.constructions);
+        if (o instanceof Town){
+            Town town = (Town) o;
+            if(town.name == this.name &&
+                    this.awash == town.awash &&
+                    this.raining == town.raining &&
+                    this.prepareForStrongRain == town.prepareForStrongRain &&
+                    this.name == town.name &&
+                    this.things == town.things &&
+                    this.constructions == town.constructions) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

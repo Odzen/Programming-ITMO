@@ -8,24 +8,27 @@ import java.util.Objects;
 public class Construction extends AbsPlace {
 
 
-    public Construction(String name, int amount, boolean floating, int length, int width, boolean dangerous, ArrayList<Room> arrayRooms, int capacityCreatures,int capacityFurniture ) {
-        super( name,  amount,  floating,  length,  width,  dangerous, arrayRooms,  capacityCreatures, capacityFurniture );
+    public Construction(String name, boolean floating, int length, int width, boolean dangerous, ArrayList<Room> arrayRooms, int capacityCreatures,int capacityFurniture ) {
+        super( name,  floating,  length,  width,  dangerous, arrayRooms,  capacityCreatures, capacityFurniture );
     }
 
     public void addRoom(Room room){
             super.getRooms().add(room);
-            super.numRooms+=1;
+            super.setNumRooms(1);
     }
 
+    public void approaching(Construction anotherConstruction){
+        System.out.println("The " + this.toString()  + " is approaching to " + anotherConstruction.toString());
+    }
 
     public int getCapacityCreatures(){return super.getCapacityCreatures();}
 
     @Override
     public void defineSize() {
-        if(numRooms>5 && this.getArea()>50){
+        if(getNumRooms()>5 && this.getArea()>50){
             this.setSize(Size.BIG);
         }
-        else if(numRooms>2 && this.getArea()>20){
+        else if(getNumRooms()>2 && this.getArea()>20){
             this.setSize(Size.MEDIUM);
         }
         else{

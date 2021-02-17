@@ -43,12 +43,12 @@ public class Creature implements Actions{
     public void sees(Object objToSee) {
 
         if(objToSee.getClass() == Creature.class){
-            System.out.println(this.getName() + " see " + objToSee.toString());
+            System.out.println(this.getName() + " sees " + objToSee.toString());
         }
         else if(objToSee.getClass() == Thing.class){
             Thing castObjToSee=(Thing)objToSee;
             if(!(castObjToSee.getSize() == Size.SMALL)){
-                System.out.println(this.getName() + " see " + castObjToSee.toString());
+                System.out.println(this.getName() + " sees " + castObjToSee.toString());
             }
         }
 
@@ -64,12 +64,12 @@ public class Creature implements Actions{
         System.out.println(getName() + " moves to " + nextThingToMove.getName());
     };
 
-    public void floatingOver(Thing thingOverFloating){
-        if(determineCastaway(thingOverFloating)){
-            System.out.println(getName() + " is floating on" + thingOverFloating.getName());
+    public void floatingOver(){
+        if(determineCastaway()){
+            System.out.println(getName() + " is floating on " + this.thing.getName());
         }
         else{
-            System.out.println(getName() + " is not a castaway floating on" + thingOverFloating.getName());
+            System.out.println(getName() + " is not a castaway floating on " + this.thing.getName());
         }
     }
 
@@ -91,7 +91,7 @@ public class Creature implements Actions{
 
     @Override
     public void moveAccessory(Accessories accessory) {
-        System.out.println(this.getName() + "moves" + accessory.toString());
+        System.out.println(this.getName() + " moves " + accessory.toString());
     }
 
     public void feels(Feelings feeling){
@@ -107,14 +107,18 @@ public class Creature implements Actions{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Creature creature = (Creature) o;
-        return castaway == creature.castaway &&
-                floating == creature.floating &&
-                Objects.equals(name, creature.name) &&
-                mood == creature.mood &&
-                Objects.equals(actualPlace, creature.actualPlace) &&
-                Objects.equals(thing, creature.thing) &&
-                Objects.equals(accessories, creature.accessories);
+        if (o instanceof Creature){
+            Creature creature = (Creature) o;
+            if(creature.castaway == this.castaway &&
+                    this.floating == creature.floating &&
+                    this.name == creature.name &&
+                    this.actualPlace == creature.actualPlace &&
+                    this.thing == creature.thing &&
+                    this.accessories == creature.accessories) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
@@ -127,18 +131,17 @@ public class Creature implements Actions{
     public String toString() {
             if (isFloating()) {
                 if (isCastaway()) {
-                    return this.getName() + "is on" + this.getThingOverFLoating().toString();
+                    return this.getName() + "is floating on the water on " + this.getThingOverFLoating().toString();
                 } else {
-                    return this.getName() + "is floating";
+                    return this.getName() + "is floating on the water";
                 }
             }
             else
                 return this.getName() +"is in"+ this.getActualPlace().toString();
     }
 
-    public boolean determineCastaway(Thing thingOverFloating) {
-        if(thingOverFloating.getFloating()==true){
-            setName("castaway");
+    public boolean determineCastaway() {
+        if(thing.isFloating()){
             castaway=true;
         }
         else{

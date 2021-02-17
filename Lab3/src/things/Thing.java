@@ -1,5 +1,7 @@
 package things;
 
+import Places.Town;
+
 import java.util.Objects;
 
 public class Thing{
@@ -12,10 +14,12 @@ public class Thing{
     private boolean dangerous;
     private int length;
     private int width;
+    private int capacity;
     private static int area;
     private Size size;
 
-    public Thing(String name, TypeThing type, int amount, boolean shiny, boolean floating, int length, int width, boolean dangerous) {
+    public Thing(String name, TypeThing type, int amount, boolean shiny, boolean floating, int length, int width, boolean dangerous, int capacity) {
+        this.capacity=capacity;
         this.name = name;
         this.type = type;
         this.amount = amount;
@@ -62,6 +66,10 @@ public class Thing{
         this.size = size;
     }
 
+    public void setCapacity(int capacity){this.capacity=capacity;}
+
+    public int getCapacity(){return capacity;}
+
     public Size getSize() {
         return size;
     }
@@ -74,10 +82,11 @@ public class Thing{
         return result;
     }
 
+
     @Override
     public String toString() {
         if (floating)
-            return this.getName() + "floating";
+            return this.getName() + " pass by floating";
         else
             return this.getName();
     }
@@ -87,20 +96,30 @@ public class Thing{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Thing thing = (Thing) o;
-        return amount == thing.amount &&
-                shiny == thing.shiny &&
-                floating == thing.floating &&
-                dangerous == thing.dangerous &&
-                length == thing.length &&
-                width == thing.width &&
-                Objects.equals(name, thing.name) &&
-                type == thing.type &&
-                size == thing.size;
+        if (o instanceof Town){
+            Thing thing = (Thing) o;
+            if(thing.name == this.name &&
+                    this.type == thing.type &&
+                    this.amount == thing.amount &&
+                    this.size == thing.size &&
+                    this.shiny == thing.shiny &&
+                    this.dangerous == thing.dangerous &&
+                    this.floating == thing.floating &&
+                    this.length == thing.length &&
+                    this.width == thing.width &&
+                    this.area == thing.area) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
     public boolean isType(TypeThing type) {
         return this.type.equals(type);
+    }
+
+    public boolean isFloating() {
+        return floating;
     }
 }

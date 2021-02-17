@@ -8,7 +8,7 @@ public class Room extends AbsPlace {
 
 
     public Room(String name, int amount, boolean floating, int length, int width, boolean dangerous,ArrayList<Thing> things, int capacityThings) {
-        super(name,amount, floating,length,width,dangerous,things,capacityThings);
+        super(name, floating,length,width,dangerous,things,capacityThings);
     }
 
     public boolean hasThing(Thing thing) {

@@ -1,5 +1,6 @@
 package Places;
 
+import living.Creature;
 import things.Size;
 import things.Thing;
 import things.TypeThing;
@@ -14,20 +15,18 @@ public abstract class AbsPlace {
     private int capacityCreatures;
     private int capacityFurniture;
     private int capacityThings;
-    private int amount;
     boolean floating;
     int length;
     int width;
     boolean dangerous;
     public static int numThings;
-    public static int numRooms;
+    private int numRooms;
     private Size size;
 
 
     //If it is a Place - Construction
-    public AbsPlace(String name, int amount, boolean floating, int length, int width, boolean dangerous, ArrayList<Room> arrayRooms, int capacityCreatures,int capacityFurniture ) {
+    public AbsPlace(String name, boolean floating, int length, int width, boolean dangerous, ArrayList<Room> arrayRooms, int capacityCreatures,int capacityFurniture ) {
         this.name=name;
-        this.amount=amount;
         this.floating=floating;
         this.length=length;
         this.width=width;
@@ -38,9 +37,8 @@ public abstract class AbsPlace {
     }
 
     //If it is a Place - Room
-    public AbsPlace(String name, int amount, boolean floating, int length, int width, boolean dangerous,ArrayList<Thing> things, int capacityThings) {
+    public AbsPlace(String name, boolean floating, int length, int width, boolean dangerous,ArrayList<Thing> things, int capacityThings) {
         this.name=name;
-        this.amount=amount;
         this.floating=floating;
         this.length=length;
         this.width=width;
@@ -64,10 +62,6 @@ public abstract class AbsPlace {
         return length;
     }
 
-    public int getAmount(){
-        return amount;
-    }
-
     public int getWidth(){
         return width;
     }
@@ -85,6 +79,10 @@ public abstract class AbsPlace {
     }
 
     public boolean isDangerous(){
+        if(dangerous)
+            System.out.println(this.toString() + " is dangerous");
+        else
+            System.out.println(this.toString() + " is not dangerous");
         return dangerous;
     }
 
@@ -96,8 +94,16 @@ public abstract class AbsPlace {
         int area=width*length;
         return area;
     }
+
+    public int getNumRooms(){
+        return numRooms;
+    }
     public void setSize(Size size) {
         this.size = size;
+    }
+
+    public void setNumRooms(int number) {
+        this.numRooms += number;
     }
 
     public void setCapacityFurniture(int capacity) {
@@ -130,24 +136,30 @@ public abstract class AbsPlace {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AbsPlace absPlace = (AbsPlace) o;
-        return capacityCreatures == absPlace.capacityCreatures &&
-                capacityFurniture == absPlace.capacityFurniture &&
-                capacityThings == absPlace.capacityThings &&
-                amount == absPlace.amount &&
-                floating == absPlace.floating &&
-                length == absPlace.length &&
-                width == absPlace.width &&
-                dangerous == absPlace.dangerous &&
-                Objects.equals(name, absPlace.name) &&
-                Objects.equals(arrayRooms, absPlace.arrayRooms) &&
-                Objects.equals(arrayThings, absPlace.arrayThings) &&
-                size == absPlace.size;
+        if (o instanceof AbsPlace){
+            AbsPlace place = (AbsPlace) o;
+            if(place.name == this.name &&
+                    this.arrayRooms == place.arrayRooms &&
+                    this.arrayThings == place.arrayThings &&
+                    this.capacityCreatures == place.capacityCreatures &&
+                    this.capacityFurniture == place.capacityFurniture &&
+                    this.capacityThings == place.capacityThings &&
+                    this.floating == place.floating &&
+                    this.length == place.length &&
+                    this.width == place.width &&
+                    this.dangerous == place.dangerous &&
+                    this.numThings == place.numThings &&
+                    this.numRooms == place.numRooms &&
+                    this.size == place.size) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, arrayRooms, arrayThings, capacityCreatures, capacityFurniture, capacityThings, amount, floating, length, width, dangerous, size);
+        return Objects.hash(name, arrayRooms, arrayThings, capacityCreatures, capacityFurniture, capacityThings, floating, length, width, dangerous, size);
     }
 
     //The implementation depends if it is a room or a construction
