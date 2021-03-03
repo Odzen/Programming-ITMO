@@ -1,0 +1,3 @@
+ssh s291005@helios.se.ifmo.ru -p 2222
+scp -P2222 -r Lab3 s291005@helios.se.ifmo.ru:programming
+scp -P2222 -r Lab2/ s291005@helios.se.ifmo.ru:.

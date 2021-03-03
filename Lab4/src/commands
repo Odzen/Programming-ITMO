@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+mkdir build
+mkdir build/classes
+javac -sourcepath src -d build/classes package/Main.java
+cp Main.java ../
+cd .. 
+java -classpath build/classes/ Main
+echo Main-Class: Main>myManifest
+jar cfm build/Main.jar myManifest -C build/classes/ .
+java -jar build/Main.jar
