@@ -118,6 +118,14 @@ public abstract class AbsPlace {
         capacityThings-= things;
     }
 
+    public void setName (String newName){
+        name=newName;
+    }
+
+    public void looksLike(String look){
+        System.out.println(this.getName()+ " похож на "+ look );
+    }
+
 
 
     public Size getSize() {

@@ -33,7 +33,6 @@ public class Thing{
     }
 
 
-
     public  void decreaseAmount(){
         amount-=1;
     }

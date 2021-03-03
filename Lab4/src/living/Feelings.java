@@ -11,6 +11,7 @@ public enum Feelings {
     SURPRISE("Surprised"),
     DWINDLING("Dwindling"),
     ATTENTION("Attention"),
+    CURIOSITY("Curiosity"),
     TRAPPED("Trapped");
 
     private final String name;

@@ -6,6 +6,7 @@ import living.Creature;
 import living.Feelings;
 import things.Thing;
 import things.TypeThing;
+import things.WaveInterface;
 
 import java.util.ArrayList;
 
@@ -28,20 +29,26 @@ public class Main {
         ArrayList<Room> roomsAux= new ArrayList<>();
         ArrayList<Room> roomsBiggerHouse= new ArrayList<>();
         ArrayList<Room> roomsOnMomminHouse= new ArrayList<>();
-        Room livingRoom= new Room("Гостиная", 1,  true,  10,  10,  false,thingsAux, 50);
-        Room toilet=new Room("туалет", 2,  true,  2,  2,  false,thingsAux, 3);
-        Room playZone=new Room("игровая зона", 2,  true,  7,  7,  false,thingsAux, 10);
-        Room office= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6);
-        Room office2= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6);
-        Room office3= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6);
+        Room livingRoom= new Room("Гостиная", 1,  true,  10,  10,  false,thingsAux, 50, false, false);
+        Room toilet=new Room("туалет", 2,  true,  2,  2,  false,thingsAux, 3, false, false);
+        Room playZone=new Room("игровая зона", 2,  true,  7,  7,  false,thingsAux, 10, false, false);
+        Room office= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6, false, false);
+        Room office2= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6, false, false);
+        Room office3= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6, false, false);
 
-        Room livingRoomBiggerHouse= new Room("Гостиная", 1,  true,  10,  10,  false,thingsAux, 50);
-        Room livingRoom2BiggerHouse= new Room("Гостиная", 1,  true,  10,  10,  false,thingsAux, 50);
-        Room toiletBiggerHouse=new Room("туалет", 2,  true,  2,  2,  false,thingsAux, 3);
-        Room playZoneBiggerHouse=new Room("игровая зона", 2,  true,  7,  7,  false,thingsAux, 10);
-        Room officeBiggerHouse= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6);
-        Room office2BiggerHouse= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6);
-        Room office3BiggerHouse= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6);
+        Room livingRoomBiggerHouse= new Room("Гостиная", 1,  true,  10,  10,  false,thingsAux, 50, false, false);
+        Room livingRoom2BiggerHouse= new Room("Гостиная", 1,  true,  10,  10,  false,thingsAux, 50, false, false);
+        Room toiletBiggerHouse=new Room("туалет", 2,  true,  2,  2,  false,thingsAux, 3, false, false);
+        Room playZoneBiggerHouse=new Room("игровая зона", 2,  true,  7,  7,  false,thingsAux, 10, false, false);
+        Room officeBiggerHouse= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6, false, false);
+        Room office2BiggerHouse= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6, false, false);
+        Room office3BiggerHouse= new Room("офис", 1,  true,  5,  5,  false,thingsAux, 6, false, false);
+
+        //2 PART
+        Room darkRoomBiggerHouse= new Room("крыша", 1,  true,  5,  5,  false,thingsAux, 11, true, true);
+        Thing masks = new Thing("золотые маски", TypeThing.MASKS, 2, false, true, 1, 1, false,0 );
+        Thing redVelvetDrapes = new Thing("красные бархатные портьеры", TypeThing.REDVELVETDRAPES, 2, false, true, 2, 2, false,0 );
+        darkRoomBiggerHouse.addThing(masks);
 
         livingRoomBiggerHouse.defineSize();
         livingRoom2BiggerHouse.defineSize();
@@ -50,6 +57,7 @@ public class Main {
         officeBiggerHouse.defineSize();
         office2BiggerHouse.defineSize();
         office3BiggerHouse.defineSize();
+        darkRoomBiggerHouse.defineSize();
 
         livingRoom.defineSize();
         toilet.defineSize();
@@ -79,6 +87,7 @@ public class Main {
         biggerHouse.addRoom(officeBiggerHouse);
         biggerHouse.addRoom(office2BiggerHouse);
         biggerHouse.addRoom(office3BiggerHouse);
+        biggerHouse.addRoom(darkRoomBiggerHouse);
 
 
 
@@ -198,6 +207,30 @@ public class Main {
         else{
             System.out.println("The " + biggerHouse.toString() + " is enough for the family of the " + houseMommin.toString());
         }
+
+        // Anonymous class using an SAM (Functional Interface) and lambda expression.
+        WaveInterface wave= (Thing thingToMove) -> System.out.println("Wave moves "+ thingToMove.toString());
+
+
+        // 2 PART
+        biggerHouse.approaching(houseMommin);
+        Thing wall= new Thing("wall",TypeThing.WALL,1,false,true,2,2,false,1);
+        moominPappa.sees(biggerHouse);
+        biggerHouse.looksLike("театр");
+        biggerHouse.setName("театр");
+
+        System.out.println(biggerHouse.toString() + " has " + masks.toString());
+        darkRoomBiggerHouse.printDarkness();
+        darkRoomBiggerHouse.printSpiderWeb();
+
+        darkRoomBiggerHouse.fallingApart();
+
+        wave.waveMovesThing(darkRoomBiggerHouse.getWallsRemoved().get(0));
+
+        System.out.println(redVelvetDrapes.toString());
+
+        moominPappa.sees(darkRoomBiggerHouse);
+        moominPappa.feels(Feelings.CURIOSITY);
 
 
 

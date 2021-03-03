@@ -66,6 +66,8 @@ public class Construction extends AbsPlace {
         }
     }
 
+
+
     public boolean enoughSpaceForFurnitore(int numberFurnitore){
         if(getCapacityFurniture()>numberFurnitore){
             return true;

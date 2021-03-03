@@ -13,6 +13,10 @@ public enum TypeThing {
     ANYTHING("предмет"),
     HOUSE("дом"),
     TREE("дерево"),
+    WALL("стена"),
+    ROOF("крыша"),
+    MASKS("золотые маски"),
+    REDVELVETDRAPES("красные бархатные портьеры"),
     ROOM("room");
 
 
