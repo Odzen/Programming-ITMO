@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Exceptions.DrownedTownException</OriginalElement>
+  <nodes>
+    <node x="287.2876942819695" y="845.0">Exceptions.SizeTownAndConstructions</node>
+    <node x="547.2876942819695" y="845.0">Exceptions.DrownedTownException</node>
+    <node x="1025.928902437681" y="1843.0">Exceptions.ProblemSeeingObject</node>
+    <node x="147.1479825517997" y="208.0">things.TypeThing</node>
+    <node x="987.75" y="1300.0">things.Thing</node>
+    <node x="1102.0376942819694" y="2300.0">living.Creature</node>
+    <node x="1398.928902437681" y="1782.0">living.Accessories</node>
+    <node x="776.2876942819695" y="1843.0">things.WaveInterface</node>
+    <node x="1554.928902437681" y="1746.0">Places.Room</node>
+    <node x="249.7876942819695" y="982.0">Places.Town</node>
+    <node x="1246.928902437681" y="1686.0">living.Feelings</node>
+    <node x="699.7471855964222" y="2110.0">living.Creature.VisionManager</node>
+    <node x="1552.4061751649535" y="0.0">things.Size</node>
+    <node x="1542.4062765055132" y="256.0">Places.AbsPlace</node>
+    <node x="1631.3181818181818" y="845.0">Places.Construction</node>
+    <node x="97.2876942819695" y="808.0">Places.Town.Sun</node>
+    <node x="1309.5122357710143" y="2135.0">living.Actions</node>
+    <node x="936.5376942819695" y="2610.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="things.Thing">
+      <point x="-12.5" y="-15.0" />
+      <point x="964.0376942819695" y="2540.0" />
+      <point x="60.0" y="2540.0" />
+      <point x="60.0" y="1626.0" />
+      <point x="996.8499999999999" y="1626.0" />
+      <point x="-81.89999999999998" y="148.0" />
+    </edge>
+    <edge source="Places.Construction" target="things.Size">
+      <point x="-48.0" y="-15.0" />
+      <point x="1655.3181818181818" y="728.0" />
+      <point x="1531.9062765055132" y="728.0" />
+      <point x="1531.9062765055132" y="178.0" />
+      <point x="1618.4061751649535" y="178.0" />
+      <point x="0.0" y="64.0" />
+    </edge>
+    <edge source="Main" target="things.TypeThing">
+      <point x="-37.5" y="-15.0" />
+      <point x="939.0376942819695" y="2590.0" />
+      <point x="18.0" y="2590.0" />
+      <point x="18.0" y="768.0" />
+      <point x="158.3622682660855" y="768.0" />
+      <point x="-67.28571428571422" y="220.0" />
+    </edge>
+    <edge source="living.Creature" target="Exceptions.ProblemSeeingObject">
+      <point x="-27.0" y="-100.0" />
+      <point x="1219.0376942819694" y="2220.0" />
+      <point x="1175.928902437681" y="2220.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="Places.Room" target="things.Size">
+      <point x="121.81818181818176" y="-112.0" />
+      <point x="1810.7470842558628" y="1666.0" />
+      <point x="1864.3756876287414" y="1666.0" />
+      <point x="1864.3756876287414" y="178.0" />
+      <point x="1674.9776037363822" y="178.0" />
+      <point x="56.57142857142867" y="64.0" />
+    </edge>
+    <edge source="living.Creature" target="things.Thing">
+      <point x="-45.0" y="-100.0" />
+      <point x="1201.0376942819694" y="2230.0" />
+      <point x="1015.428902437681" y="2230.0" />
+      <point x="1015.428902437681" y="1666.0" />
+      <point x="1069.6499999999999" y="1666.0" />
+      <point x="-9.100000000000023" y="148.0" />
+    </edge>
+    <edge source="Places.Room" target="Places.AbsPlace">
+      <point x="24.363636363636488" y="-112.0" />
+      <point x="1713.2925388013175" y="1626.0" />
+      <point x="1798.1561751649535" y="1626.0" />
+      <point x="1798.1561751649535" y="698.0" />
+      <point x="1696.4062765055132" y="698.0" />
+      <point x="28.0" y="172.0" />
+    </edge>
+    <edge source="living.Creature" target="living.Accessories">
+      <point x="99.0" y="-100.0" />
+      <point x="1345.0376942819694" y="2260.0" />
+      <point x="1472.428902437681" y="2260.0" />
+      <point x="1472.428902437681" y="2070.0" />
+      <point x="1483.928902437681" y="2070.0" />
+      <point x="17.000000000000057" y="76.0" />
+    </edge>
+    <edge source="Main" target="Places.Town">
+      <point x="-17.5" y="-15.0" />
+      <point x="959.0376942819695" y="2550.0" />
+      <point x="38.0" y="2550.0" />
+      <point x="38.0" y="1280.0" />
+      <point x="328.5376942819695" y="1280.0" />
+      <point x="-78.75" y="124.0" />
+    </edge>
+    <edge source="Places.Town.Sun" target="Places.Town">
+      <point x="14.166666666666629" y="52.0" />
+      <point x="196.45436094863612" y="952.0" />
+      <point x="302.2876942819695" y="952.0" />
+      <point x="-105.0" y="-124.0" />
+    </edge>
+    <edge source="Main" target="living.Accessories">
+      <point x="17.5" y="-15.0" />
+      <point x="994.0376942819695" y="2550.0" />
+      <point x="1735.1694111232282" y="2550.0" />
+      <point x="1735.1694111232282" y="2050.0" />
+      <point x="1517.928902437681" y="2050.0" />
+      <point x="51.00000000000006" y="76.0" />
+    </edge>
+    <edge source="living.Actions" target="living.Accessories">
+      <point x="0.0" y="-15.0" />
+      <point x="1361.5122357710143" y="2070.0" />
+      <point x="1415.928902437681" y="2070.0" />
+      <point x="-51.0" y="76.0" />
+    </edge>
+    <edge source="living.Creature" target="living.Actions">
+      <point x="45.0" y="-100.0" />
+      <point x="1291.0376942819694" y="2230.0" />
+      <point x="1335.5122357710143" y="2230.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="living.Actions" target="living.Creature">
+      <point x="26.0" y="15.0" />
+      <point x="1387.5122357710143" y="2240.0" />
+      <point x="1309.0376942819694" y="2240.0" />
+      <point x="63.0" y="-100.0" />
+    </edge>
+    <edge source="Main" target="Places.Room">
+      <point x="27.5" y="-15.0" />
+      <point x="1004.0376942819695" y="2570.0" />
+      <point x="1770.8376942819696" y="2570.0" />
+      <point x="1770.8376942819696" y="2090.0" />
+      <point x="1796.128902437681" y="2090.0" />
+      <point x="107.20000000000005" y="112.0" />
+    </edge>
+    <edge source="Places.AbsPlace" target="things.Size">
+      <point x="-63.0" y="-172.0" />
+      <point x="1605.4062765055132" y="188.0" />
+      <point x="1637.2633180220964" y="188.0" />
+      <point x="18.85714285714289" y="64.0" />
+    </edge>
+    <edge source="Main" target="Places.Town.Sun">
+      <point x="-27.5" y="-15.0" />
+      <point x="949.0376942819695" y="2570.0" />
+      <point x="28.0" y="2570.0" />
+      <point x="28.0" y="962.0" />
+      <point x="139.7876942819695" y="962.0" />
+      <point x="-42.5" y="52.0" />
+    </edge>
+    <edge source="living.Creature" target="living.Creature.VisionManager">
+      <point x="-135.0" y="-100.0" />
+      <point x="1111.0376942819694" y="2280.0" />
+      <point x="721.3471855964223" y="2280.0" />
+      <point x="-86.39999999999998" y="40.0" />
+    </edge>
+    <edge source="Places.Town" target="Exceptions.DrownedTownException">
+      <point x="35.0" y="-124.0" />
+      <point x="442.2876942819695" y="932.0" />
+      <point x="599.2876942819695" y="932.0" />
+      <point x="-52.0" y="15.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="Places.AbsPlace">
+      <point x="18.0" y="-40.0" />
+      <point x="825.7471855964222" y="2050.0" />
+      <point x="765.7876942819695" y="2050.0" />
+      <point x="765.7876942819695" y="768.0" />
+      <point x="1556.4062765055132" y="768.0" />
+      <point x="-112.0" y="172.0" />
+    </edge>
+    <edge source="Main" target="living.Feelings">
+      <point x="12.5" y="-15.0" />
+      <point x="989.0376942819695" y="2540.0" />
+      <point x="1730.1694111232282" y="2540.0" />
+      <point x="1730.1694111232282" y="2060.0" />
+      <point x="1362.428902437681" y="2060.0" />
+      <point x="49.5" y="172.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="things.Thing">
+      <point x="54.0" y="-40.0" />
+      <point x="861.7471855964222" y="2080.0" />
+      <point x="959.2165967196505" y="2080.0" />
+      <point x="959.2165967196505" y="1656.0" />
+      <point x="1051.45" y="1656.0" />
+      <point x="-27.299999999999955" y="148.0" />
+    </edge>
+    <edge source="Places.Town" target="Exceptions.SizeTownAndConstructions">
+      <point x="0.0" y="-124.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Places.AbsPlace" target="Places.Room">
+      <point x="56.0" y="172.0" />
+      <point x="1724.4062765055132" y="688.0" />
+      <point x="1809.1561751649535" y="688.0" />
+      <point x="1809.1561751649535" y="1636.0" />
+      <point x="1737.6561751649538" y="1636.0" />
+      <point x="48.72727272727275" y="-112.0" />
+    </edge>
+    <edge source="Places.Town" target="Places.Construction">
+      <point x="105.0" y="-124.0" />
+      <point x="512.2876942819695" y="952.0" />
+      <point x="1645.7181818181818" y="952.0" />
+      <point x="-57.59999999999991" y="15.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="Places.Town">
+      <point x="-18.0" y="-40.0" />
+      <point x="789.7471855964222" y="2060.0" />
+      <point x="381.0376942819695" y="2060.0" />
+      <point x="-26.25" y="124.0" />
+    </edge>
+    <edge source="things.Thing" target="Places.Town">
+      <point x="-80.88888888888891" y="-148.0" />
+      <point x="997.8611111111111" y="1280.0" />
+      <point x="433.5376942819695" y="1280.0" />
+      <point x="26.25" y="124.0" />
+    </edge>
+    <edge source="living.Creature" target="living.Feelings">
+      <point x="9.0" y="-100.0" />
+      <point x="1255.0376942819694" y="2210.0" />
+      <point x="1269.0122357710143" y="2210.0" />
+      <point x="1269.0122357710143" y="2090.0" />
+      <point x="1263.428902437681" y="2090.0" />
+      <point x="-49.5" y="172.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="Exceptions.ProblemSeeingObject">
+      <point x="90.0" y="-40.0" />
+      <point x="897.7471855964222" y="2090.0" />
+      <point x="1075.928902437681" y="2090.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="Places.Town.Sun" target="things.TypeThing">
+      <point x="-42.5" y="-52.0" />
+      <point x="139.7876942819695" y="788.0" />
+      <point x="203.21941112322827" y="788.0" />
+      <point x="-22.428571428571445" y="220.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="things.Size">
+      <point x="-90.0" y="-40.0" />
+      <point x="717.7471855964222" y="2080.0" />
+      <point x="49.0" y="2080.0" />
+      <point x="49.0" y="148.0" />
+      <point x="1561.8347465935249" y="148.0" />
+      <point x="-56.57142857142867" y="64.0" />
+    </edge>
+    <edge source="Places.Room" target="things.Thing">
+      <point x="-121.81818181818198" y="-112.0" />
+      <point x="1567.110720619499" y="1656.0" />
+      <point x="1106.05" y="1656.0" />
+      <point x="27.299999999999955" y="148.0" />
+    </edge>
+    <edge source="Places.Town" target="things.Thing">
+      <point x="78.75" y="124.0" />
+      <point x="486.0376942819695" y="1270.0" />
+      <point x="1018.0833333333333" y="1270.0" />
+      <point x="-60.66666666666674" y="-148.0" />
+    </edge>
+    <edge source="things.WaveInterface" target="things.Thing">
+      <point x="0.0" y="-15.0" />
+      <point x="852.2876942819695" y="1646.0" />
+      <point x="1033.25" y="1646.0" />
+      <point x="-45.5" y="148.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="living.Creature">
+      <point x="0.0" y="40.0" />
+      <point x="807.7471855964222" y="2260.0" />
+      <point x="1147.0376942819694" y="2260.0" />
+      <point x="-99.0" y="-100.0" />
+    </edge>
+    <edge source="Places.Room" target="things.TypeThing">
+      <point x="-24.363636363636488" y="-112.0" />
+      <point x="1664.5652660740445" y="1616.0" />
+      <point x="1560.1562765055132" y="1616.0" />
+      <point x="1560.1562765055132" y="738.0" />
+      <point x="292.93369683751405" y="738.0" />
+      <point x="67.28571428571433" y="220.0" />
+    </edge>
+    <edge source="living.Creature" target="Places.Room">
+      <point x="117.0" y="-100.0" />
+      <point x="1363.0376942819694" y="2270.0" />
+      <point x="1574.928902437681" y="2270.0" />
+      <point x="1574.928902437681" y="2090.0" />
+      <point x="1635.328902437681" y="2090.0" />
+      <point x="-53.59999999999991" y="112.0" />
+    </edge>
+    <edge source="Places.Construction" target="Places.Room">
+      <point x="0.0" y="15.0" />
+      <point x="1703.3181818181818" y="1666.0" />
+      <point x="1688.928902437681" y="1666.0" />
+      <point x="0.0" y="-112.0" />
+    </edge>
+    <edge source="things.Thing" target="things.TypeThing">
+      <point x="0.0" y="-148.0" />
+      <point x="1078.75" y="1280.0" />
+      <point x="1074.138888888889" y="1280.0" />
+      <point x="1074.138888888889" y="748.0" />
+      <point x="270.5051254089426" y="748.0" />
+      <point x="44.85714285714289" y="220.0" />
+    </edge>
+    <edge source="Places.Construction" target="Places.AbsPlace">
+      <point x="0.0" y="-15.0" />
+      <point x="1703.3181818181818" y="718.0" />
+      <point x="1640.4062765055132" y="718.0" />
+      <point x="-28.0" y="172.0" />
+    </edge>
+    <edge source="Main" target="living.Creature">
+      <point x="2.5" y="-15.0" />
+      <point x="979.0376942819695" y="2520.0" />
+      <point x="1174.0376942819694" y="2520.0" />
+      <point x="-72.0" y="100.0" />
+    </edge>
+    <edge source="living.Actions" target="Places.Room">
+      <point x="34.66666666666674" y="-15.0" />
+      <point x="1396.178902437681" y="2080.0" />
+      <point x="1581.728902437681" y="2080.0" />
+      <point x="-107.20000000000005" y="112.0" />
+    </edge>
+    <edge source="Places.AbsPlace" target="things.Thing">
+      <point x="-56.0" y="172.0" />
+      <point x="1612.4062765055132" y="788.0" />
+      <point x="1183.7622357710143" y="788.0" />
+      <point x="1183.7622357710143" y="1280.0" />
+      <point x="1159.638888888889" y="1280.0" />
+      <point x="80.88888888888891" y="-148.0" />
+    </edge>
+    <edge source="things.Thing" target="things.Size">
+      <point x="40.44444444444434" y="-148.0" />
+      <point x="1119.1944444444443" y="1260.0" />
+      <point x="1161.7622357710143" y="1260.0" />
+      <point x="1161.7622357710143" y="168.0" />
+      <point x="1599.5490323078106" y="168.0" />
+      <point x="-18.85714285714289" y="64.0" />
+    </edge>
+    <edge source="living.Creature.VisionManager" target="things.TypeThing">
+      <point x="-54.0" y="-40.0" />
+      <point x="753.7471855964222" y="2070.0" />
+      <point x="86.7876942819695" y="2070.0" />
+      <point x="86.7876942819695" y="778.0" />
+      <point x="180.79083969465682" y="778.0" />
+      <point x="-44.85714285714289" y="220.0" />
+    </edge>
+    <edge source="Main" target="Places.Construction">
+      <point x="32.5" y="-15.0" />
+      <point x="1009.0376942819695" y="2580.0" />
+      <point x="1884.7165967196506" y="2580.0" />
+      <point x="1884.7165967196506" y="962.0" />
+      <point x="1732.1181818181817" y="962.0" />
+      <point x="28.799999999999955" y="15.0" />
+    </edge>
+    <edge source="living.Actions" target="living.Feelings">
+      <point x="-34.66666666666674" y="-15.0" />
+      <point x="1326.8455691043475" y="2090.0" />
+      <point x="1329.428902437681" y="2090.0" />
+      <point x="16.5" y="172.0" />
+    </edge>
+    <edge source="Places.Town" target="Places.Town.Sun">
+      <point x="-140.0" y="-124.0" />
+      <point x="267.2876942819695" y="962.0" />
+      <point x="168.12102761530286" y="962.0" />
+      <point x="-14.166666666666671" y="52.0" />
+    </edge>
+    <edge source="Main" target="things.WaveInterface">
+      <point x="-2.5" y="-15.0" />
+      <point x="974.0376942819695" y="2520.0" />
+      <point x="689.2471855964222" y="2520.0" />
+      <point x="689.2471855964222" y="2090.0" />
+      <point x="852.2876942819695" y="2090.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3973684210526316" x="1384.392329794316" y="650.5960264900662" />
+  <SelectedNodes>
+    <node>Places.AbsPlace</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
